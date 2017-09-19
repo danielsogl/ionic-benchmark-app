@@ -1,4 +1,3 @@
-import { BenchmarkProvider } from '../../providers/benchmark/benchmark';
 import { StorageProvider } from '../../providers/storage/storage';
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
@@ -11,7 +10,7 @@ import { IonicPage } from 'ionic-angular';
 })
 export class StorageBenchmarkPage {
 
-  constructor(private storage: StorageProvider, private benchmark: BenchmarkProvider) {
+  constructor(private storage: StorageProvider) {
   }
 
   ionViewDidLoad() {
@@ -39,7 +38,6 @@ export class StorageBenchmarkPage {
   }
 
   storeSIngleItems() {
-    let counter: number = 0;
     let items: any = [];
 
     for (let i = 0; i < 1000; i++) {
