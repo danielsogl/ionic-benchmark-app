@@ -6,7 +6,6 @@ import { Storage } from '@ionic/storage';
 export class StorageProvider {
 
   constructor(private storage: Storage) {
-    console.log('Hello StorageProvider Provider');
     this.storage.clear();
   }
 
@@ -22,7 +21,7 @@ export class StorageProvider {
     return this.storage.get('items');
   }
 
-  getSingleItem(index:number): Promise<any> {
+  getSingleItem(index: number): Promise<any> {
     return this.storage.get(`item_${index}`);
   }
 

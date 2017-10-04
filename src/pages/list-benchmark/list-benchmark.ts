@@ -1,6 +1,5 @@
-import { BenchmarkProvider } from '../../providers/benchmark/benchmark';
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage } from 'ionic-angular';
 
 
 @IonicPage()
@@ -10,8 +9,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class ListBenchmarkPage {
 
-  constructor(public navCtrl: NavController, private benchmark: BenchmarkProvider) {
-  }
+  constructor() { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListBenchmarkPage');

@@ -15,10 +15,6 @@ export class ViewStackPage {
     this.index = this.navCtrl.getViews().length;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ViewStackPage');
-  }
-
   pushView() {
     this.navCtrl.push('ViewStackPage');
   }

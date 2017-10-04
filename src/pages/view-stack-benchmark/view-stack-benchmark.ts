@@ -8,12 +8,7 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class ViewStackBenchmarkPage {
 
-  constructor(public navCtrl: NavController) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ViewStackBenchmarkPage');
-  }
+  constructor(public navCtrl: NavController) { }
 
   pushView() {
     this.navCtrl.push('ViewStackPage');

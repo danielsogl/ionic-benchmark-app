@@ -1,16 +1,14 @@
-import { HttpModule } from '@angular/http';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { BrowserModule } from '@angular/platform-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
-import { MyApp } from './app.component';
-import { StorageProvider } from '../providers/storage/storage';
-import { HttpProvider } from '../providers/http/http';
-import { BenchmarkProvider } from '../providers/benchmark/benchmark';
-
 import { IonicStorageModule } from '@ionic/storage';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+
+import { HttpProvider } from '../providers/http/http';
+import { StorageProvider } from '../providers/storage/storage';
+import { MyApp } from './app.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +21,7 @@ import { IonicStorageModule } from '@ionic/storage';
       name: '__benchmarkdb',
          driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
-    HttpModule
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -34,8 +32,7 @@ import { IonicStorageModule } from '@ionic/storage';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     StorageProvider,
-    HttpProvider,
-    BenchmarkProvider
+    HttpProvider
   ]
 })
 export class AppModule {}
