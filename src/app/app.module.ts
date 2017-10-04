@@ -19,7 +19,7 @@ import { MyApp } from './app.component';
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot({
       name: '__benchmarkdb',
-         driverOrder: ['indexeddb', 'sqlite', 'websql']
+      driverOrder: ['indexeddb', 'sqlite', 'websql']
     }),
     HttpClientModule
   ],
@@ -30,9 +30,9 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     StorageProvider,
     HttpProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }
