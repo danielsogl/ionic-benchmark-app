@@ -26,8 +26,12 @@ export class HomePage {
     this.navCtrl.push('StorageBenchmarkPage');
   }
 
-  openViewSTackBenchmark() {
+  openViewStackBenchmark() {
     this.navCtrl.push('ViewStackBenchmarkPage');
+  }
+
+  openChartBenchmark() {
+    this.navCtrl.push('ChartBenchmarkPage');
   }
 
 }
