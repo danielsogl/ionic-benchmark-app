@@ -10,9 +10,7 @@ import { IonicPage } from 'ionic-angular';
 export class ListBenchmarkPage {
 
   data: Array<Data> = [];
-  selected: number = undefined;
   id: number = 1;
-  backup: Array<Data> = undefined;
 
   constructor() { }
 
@@ -32,25 +30,6 @@ export class ListBenchmarkPage {
     return Math.round(Math.random() * 1000) % max;
   }
 
-  itemById(index: number, item: Data) {
-    return item.id;
-  }
-
-  select(item: Data, event: Event) {
-    event.preventDefault();
-    this.selected = item.id;
-  }
-
-  delete(item: Data, event: Event) {
-    event.preventDefault();
-    for (let i = 0, l = this.data.length; i < l; i++) {
-      if (this.data[i].id === item.id) {
-        this.data.splice(i, 1);
-        break;
-      }
-    }
-  }
-
   run() {
     this.data = this.buildData();
   }
@@ -67,11 +46,9 @@ export class ListBenchmarkPage {
 
   runLots() {
     this.data = this.buildData(10000);
-    this.selected = undefined;
   }
   clear() {
     this.data = [];
-    this.selected = undefined;
   }
   swapRows() {
     if (this.data.length > 10) {
