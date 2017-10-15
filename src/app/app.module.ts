@@ -6,8 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { HttpProvider } from '../providers/http/http';
-import { StorageProvider } from '../providers/storage/storage';
 import { MyApp } from './app.component';
 
 @NgModule({
@@ -30,9 +28,7 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    StorageProvider,
-    HttpProvider
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule { }

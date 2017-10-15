@@ -1,7 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
-
-import { HttpProvider } from '../../providers/http/http';
 
 
 @IonicPage()
@@ -11,12 +10,14 @@ import { HttpProvider } from '../../providers/http/http';
 })
 export class HttpBenchmarkPage {
 
-  constructor(private http: HttpProvider) { }
+  private endpoint: string = 'https://jsonplaceholder.typicode.com';
+
+  constructor(public http: HttpClient) { }
 
   runGetComments() {
     const d1 = new Date().getTime();
 
-    this.http.getComments().subscribe(data => {
+    this.http.get(this.endpoint + '/comments').subscribe(data => {
       const d2: number = new Date().getTime();
       console.log('Item gelade nach ' + (d2 - d1) + 'ms');
     });
@@ -27,7 +28,7 @@ export class HttpBenchmarkPage {
     let counter = 0;
 
     for (let i = 1; i < 501; i++) {
-      this.http.getSingleComments(i).subscribe(value => {
+      this.http.get(this.endpoint + '/comments/' + i).subscribe(value => {
         counter++;
         if (counter === 499) {
           const d2: number = new Date().getTime();
