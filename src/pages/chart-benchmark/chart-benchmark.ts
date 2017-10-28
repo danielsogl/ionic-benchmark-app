@@ -17,7 +17,7 @@ export class ChartBenchmarkPage {
   public ready: boolean = false;
 
   constructor() {
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 1000; i++) {
       const number = Math.floor(Math.random() * 100);
       this.chartData[i] = number;
       this.chartLabel[i] = number.toString();

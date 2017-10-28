@@ -19,9 +19,7 @@ export class StorageBenchmarkPage {
     for (let i = 0; i < 1000; i++) {
       items.push({
         id: i,
-        name: 'mustermann',
-        vorname: 'Max',
-        datum: new Date()
+        body: 'Lorem ipsum',
       });
     }
 
@@ -33,15 +31,13 @@ export class StorageBenchmarkPage {
     });
   }
 
-  storeSIngleItems() {
+  storeSingleItems() {
     let items: any = [];
 
     for (let i = 0; i < 1000; i++) {
       items.push({
         id: i,
-        name: 'mustermann',
-        vorname: 'Max',
-        datum: new Date()
+        body: 'Lorem ipsum',
       });
     }
 

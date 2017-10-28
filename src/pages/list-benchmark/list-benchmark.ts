@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 
-
 @IonicPage()
 @Component({
   selector: 'page-list-benchmark',
@@ -47,15 +46,9 @@ export class ListBenchmarkPage {
   runLots() {
     this.data = this.buildData(10000);
   }
+
   clear() {
     this.data = [];
-  }
-  swapRows() {
-    if (this.data.length > 10) {
-      var a = this.data[4];
-      this.data[4] = this.data[9];
-      this.data[9] = a;
-    }
   }
 
 }
