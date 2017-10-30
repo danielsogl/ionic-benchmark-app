@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
-import { Component } from "@angular/core";
-import { IonicPage } from "ionic-angular";
+import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({

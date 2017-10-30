@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
-
 import { Storage } from '@ionic/storage';
-
+import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
