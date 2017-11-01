@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>ChartBenchmark</ion-title>
+    <ion-title>Chart Benchmark</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -9,9 +9,9 @@
 
 <ion-content padding>
 
-  <button ion-button block (click)="render()" [disabled]="!ready">Render 500 Points</button>
+  <button ion-button block (click)="render()" [disabled]="!ready">Render Chart</button>
 
+  <div id="container" style="display: block;"	></div>
 
-  <canvas #chartCanvas></canvas>
 
 </ion-content>
